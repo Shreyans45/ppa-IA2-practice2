@@ -1,35 +1,35 @@
 #include<stdio.h>
-int main()
+int input_number()
 {
-  int num;
-  printf("enter the value of num ");
-  scanf("%d",&num);
-  retunr num;
+  int n;
+  printf("Enter the value \n");
+  scanf("%d",&n);
+  return n;
 }
-int is_composite(int num)
+int is_composite(int n)
 {
   int i;
-  for(i =2;i<=n/2;++i)
+  for(i=2;i<n;++i) 
   {
-    if(num%i==0)
-    return 0;
-      
-    else
-    return 1;
-  }}
-  void output(int n,int composite)
+    if(n%i==0)
   {
-    if(composite==0)
-    printf("composite");
-    else
-    printf("not composite");
-  }
-  int main()
-  {
-    int num,x;
-    num-=input_number();
-    x=is_composite(n);
-    output(n,x)
     return 0;
   }
-  
+  }
+  return 1;
+}
+void output(int n,int composite)
+{
+  if(composite)
+  printf("NOT COMPOSITE");
+  else
+  printf("COMPOSITE");
+}
+int main()
+{
+  int n,x;
+  n=input_number();
+  x=is_composite(n);
+  output(n,x);
+  return 0;
+}
